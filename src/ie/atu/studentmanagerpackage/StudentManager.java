@@ -23,14 +23,30 @@ public class StudentManager {
 		this.stuObjArrList = studentList;
 	}
 
-	// Student Add Method                   
+	// Add Student by Student Object                  
 	public boolean addStudent(Student studentObject) {
 			return stuObjArrList.add(studentObject);
 	}
+
+	// Add Student by Student ID 
+	public boolean addStudent(String studentId) {
+		Student studentObject = new Student(studentId);
+		return stuObjArrList.add(studentObject);
+	}	
 	
-	// Student Add Method                   
+	// Remove Student by Object                  
 	public boolean removeStudent(Student studentObject) {
-			return stuObjArrList.remove(studentObject);
+		return stuObjArrList.remove(studentObject);
+	}
+
+	// Remove Student by Object                  
+	public boolean removeStudent(String studentId) {
+		for (Student studentObject : stuObjArrList ){
+			if(studentObject.getStudentId().equals(studentId)) {
+				return stuObjArrList.remove(studentObject);
+			}
+		}
+		return false;
 	}
 
 	public int findTotalStudents() {
