@@ -8,11 +8,6 @@ public class Main {
 	// Main method containing print statement.
 	public static void main(String[] args) {
 		
-//		// Create menu object
-//		Menu menuObject = new Menu();
-//		// Run menu start method
-//		menuObject.start();
-		
 		StudentManager stuManObj = new StudentManager();
 		
 		Student studentObject1 = new Student("G00123456");
@@ -20,10 +15,14 @@ public class Main {
 		boolean addStatus = stuManObj.addStudent(studentObject1);
 		
 		System.out.println(addStatus);
+
+		stuManObj.findTotalStudents();
 		
 		boolean removeStatus = stuManObj.removeStudent(studentObject1);
 		
 		System.out.println(removeStatus);
+
+		stuManObj.findTotalStudents();
 		
 		System.out.println("The End");
 		

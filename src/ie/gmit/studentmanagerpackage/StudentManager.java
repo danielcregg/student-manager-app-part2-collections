@@ -1,9 +1,7 @@
 package ie.gmit.studentmanagerpackage;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-  
 
 public class StudentManager {
     
@@ -33,6 +31,11 @@ public class StudentManager {
 	// Student Add Method                   
 	public boolean removeStudent(Student studentObject) {
 			return stuObjArrList.remove(studentObject);
+	}
+
+	public int findTotalStudents() {
+		// Returns the current number of Students in the ArrayList
+		return stuObjArrList.size();
 	}
 	
 }
