@@ -3,7 +3,11 @@
     "editor.inlayHints.enabled": "off",
     "files.exclude": {
         "**/.devcontainer": true,
-        "**/.vscode": true
+        "**/.vscode": true,
+        "**/bin": true,
+        ".gitignore": true,
+        ".classpath": true,
+        ".project": true
     },
     "workbench.tree.indent": 15,
     "workbench.tree.renderIndentGuides": "always",
